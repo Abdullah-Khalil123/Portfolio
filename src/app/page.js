@@ -1,95 +1,79 @@
-import Image from "next/image";
+'use client'
 import styles from "./page.module.css";
+import InfiniteText from "@/infiniteText/infiniteText";
+import Gallery from "@/projectGallery/gallery";
+import Parallax from "@/parallax/parallax";
+import { useEffect, useState } from "react";
+import Heading from "@/headingAnimation/heading";
+import { AnimatePresence } from "framer-motion";
+import LoadingScreen from "@/LoadingScreen/loading";
+import About from "@/About/about";
+import Footer from "@/Footer/footer";
+import MobileParallax from "@/parallaxMobile";
+import ProjectGalleryMobile from "@/projectGalleryMobile";
+
 
 export default function Home() {
+
+  const [isMobile,setIsMobile] = useState(false);
+
+
+
+  useEffect(()=>{
+    (
+      async () =>{
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
+        const locomotiveScroll = new LocomotiveScroll({
+          mobile:{
+            smooth:true,
+          },
+          smoothMobile:true,
+          smooth:true,
+        });
+      }
+    )()
+    setTimeout(()=>{
+      setIsLoading(false);
+      document.body.style.cursor='default'
+      window.scrollTo(0,0)
+    },2000)
+    const handleResize=()=>{
+      setIsMobile(window.innerWidth<600)
+    }
+    handleResize()
+    window.addEventListener("resize",handleResize);
+    return()=>window.removeEventListener("resize",handleResize);
+  },[])
+
+  const [isLoading, setIsLoading] = useState(true)
+
   return (
+    <>
+    <AnimatePresence mode="wait">
+      {isLoading && <LoadingScreen/>}
+    </AnimatePresence>
+    <InfiniteText/>
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Heading heading={"About"}/>
+      <About/>
+      <Heading heading={"Projects"}/>
+      {
+        isMobile?(
+          <ProjectGalleryMobile/>
+        ):(
+          <Gallery/>
+        )
+      }
+      <Heading heading={"Skills"}/>
+      {
+        isMobile?(
+          <MobileParallax/>
+        ):(
+          <Parallax/>
+        )
+      }
+      <Footer/>
     </main>
+    </>
   );
 }
