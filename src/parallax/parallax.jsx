@@ -42,7 +42,8 @@ const Column = ({images, y=0})=>{
               src={`${nextConfig.basePath}/skills/${src}`}
               width={1}
               height={1}
-              alt='parallax image'  
+              alt='parallax image' 
+              loading='eager' 
             />
           </div>
         })

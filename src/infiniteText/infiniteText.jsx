@@ -1,4 +1,3 @@
-"use client"
 import { useEffect, useRef, useState } from 'react'
 import styles from './style.module.css'
 import Image from 'next/image'
@@ -65,8 +64,8 @@ export default function InfiniteText() {
         />
         <div ref={slider} className={styles.loopContainer} data-scroll data-scroll-speed={0.3}>
           <div className={styles.loop}>
-            <p ref={firstText}>Mobile & Web Developer -</p>
-            <p ref={secondText}>Mobile & App Developer -</p>
+            <p ref={firstText}>Full Stack Developer -</p>
+            <p ref={secondText}>Full Stack Developer -</p>
           </div>
         </div>
       </div>

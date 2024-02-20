@@ -36,9 +36,9 @@ export default function Home() {
       setIsLoading(false);
       document.body.style.cursor='default'
       window.scrollTo(0,0)
-    },2500)
+    },2000)
     const handleResize=()=>{
-      setIsMobile(window.innerWidth<600)
+      setIsMobile(window.innerWidth<707)
     }
     handleResize()
     window.addEventListener("resize",handleResize);

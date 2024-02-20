@@ -36,6 +36,7 @@ const From = ({images,animation,animationSecond}) =>{
           src={`${nextConfig.basePath}/skills/${images[0].src}`}
           fill={true}
           alt='skills image'
+          loading='eager'
         />
       </motion.div>
       <motion.div
@@ -49,6 +50,7 @@ const From = ({images,animation,animationSecond}) =>{
             src={`${nextConfig.basePath}/skills/${images[1].src}`}
             fill={true}
             alt='skills image'
+            loading='eager'
         />
       </motion.div>
     </div>
