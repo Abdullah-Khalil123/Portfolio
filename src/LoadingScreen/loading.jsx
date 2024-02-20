@@ -11,7 +11,7 @@ export default function LoadingScreen() {
     if(index == words.length -1) return;
     setTimeout(()=>{
       setIndex(index+1)
-    }, index == 0 ? 1000 : 200)
+    }, index == 0 ? 1000 : 225)
   },[index])
   return (
     <>
