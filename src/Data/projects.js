@@ -1,11 +1,11 @@
 export const projects=[
     {
-        name:'Estrakt',
-        src:'estrakt.webp',
+        name:'QuickDine',
+        src:'quickdine.webp',
         link:'https://estrakt.com',
         color:"#000000",
-        tech:'Hostinger & Wordpress',
-        type:'Full Stack',
+        tech:'Flutter & SQL',
+        type:'Mobile App',
     },
     {
         name:'YoutubeDB',
