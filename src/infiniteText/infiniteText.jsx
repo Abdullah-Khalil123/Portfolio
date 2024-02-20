@@ -59,14 +59,14 @@ export default function InfiniteText() {
       <div className={styles.background}>
         <div className={styles.shader}></div>
         <Image
-          src={`${nextConfig.basePath}/images/bgdark.jpg`}
+          src={`${nextConfig.basePath}/images/background.jpg`}
           fill={true}
           alt='background image'
         />
         <div ref={slider} className={styles.loopContainer} data-scroll data-scroll-speed={0.3}>
           <div className={styles.loop}>
-            <p ref={firstText}>Full Stack Developer -</p>
-            <p ref={secondText}>Full Stack Developer -</p>
+            <p ref={firstText}>Mobile & Web Developer -</p>
+            <p ref={secondText}>Mobile & App Developer -</p>
           </div>
         </div>
       </div>

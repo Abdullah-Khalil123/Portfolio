@@ -1,8 +1,8 @@
 export const skills = [
     {
-        name:'WordPress',
-        src:'wordpress.svg',
-        color:'#21759b',
+        name:'tailwind',
+        src:'tailwind.svg',
+        color:'#fff',
     },
     {
         name:'Next Js',
@@ -15,8 +15,8 @@ export const skills = [
         color:'#222222',
     },
     {
-        name:'tailwind',
-        src:'tailwind.svg',
+        name:'flutter',
+        src:'flutter.svg',
         color:'#ffffff',
     },
     {

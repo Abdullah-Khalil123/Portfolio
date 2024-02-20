@@ -65,7 +65,7 @@ export default function About() {
         data-scroll-speed={isMobile?0.2:0.1}
       >
         <Image
-          src={`${nextConfig.basePath}/images/about.jpg`}
+          src={`${nextConfig.basePath}/images/about.jpeg`}
           fill={true}
           alt='My Pic'
         />

@@ -1,5 +1,5 @@
 export const aboutData={
     name:"Abdullah Khalil",
-    desc:"I'm a versatile developer with expertise in both web and mobile development. Skilled in frontend and backend technologies, I thrive on staying current with the latest trends and tools in both realms. With experience in Flutter for mobile development, I bring a unique perspective to crafting seamless digital experiences across platforms.",
+    desc:"I'm a versatile developer experienced in web and mobile development, skilled in both frontend and backend technologies. Specializing in Flutter for mobile development, I craft seamless digital experiences across platforms.",
     based:"Islamabad, Pakistan",
 }
