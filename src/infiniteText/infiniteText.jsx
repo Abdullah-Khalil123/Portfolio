@@ -59,7 +59,7 @@ export default function InfiniteText() {
       <div className={styles.background}>
         <div className={styles.shader}></div>
         <Image
-          src={`${nextConfig.basePath}/images/background.jpg`}
+          src={`${nextConfig.basePath}/images/background.webp`}
           fill={true}
           alt='background image'
         />
