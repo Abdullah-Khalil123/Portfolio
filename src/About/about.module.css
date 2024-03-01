@@ -11,6 +11,13 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    background: linear-gradient(315deg, rgba(252, 231, 145, 1.0), rgba(75, 79, 190, 1.0));
+    color: transparent;
+    background-clip: text;
+}
+.aboutContainer span{
+    display: contents;
 }
 .aboutImage{
     width: 40%;

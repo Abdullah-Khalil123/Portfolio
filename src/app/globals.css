@@ -7,6 +7,13 @@ body{
   cursor: wait;
   transition: background-color 0.2s linear;
   color: white;
+
+
+  background-color: #010105;
+  opacity: 1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.143) 1.1px, #010105 1.1px);
+  background-size: 22px 22px;
+
 }
 ::-webkit-scrollbar{
   display: none;
@@ -15,4 +22,5 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }

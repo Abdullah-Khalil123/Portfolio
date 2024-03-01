@@ -8,7 +8,6 @@ import nextConfig from '../../next.config'
 export default function About() {
 
   const aboutArray=[
-    `Hi I'm ${aboutData.name}`,
     aboutData.desc,
     `Based in ${aboutData.based}`
   ]
@@ -31,6 +30,9 @@ export default function About() {
   return (
     <div className={styles.aboutContainer} ref={aboutContainer}>
       <div className={styles.aboutDescriptions} ref={aboutDescription} data-scroll data-scroll-speed={isMobile?0.2:0.3}>
+        <h2>
+        Hi I'm {aboutData.name}
+        </h2>
         {
           aboutArray.map((para,index)=>{
             return(
@@ -45,7 +47,7 @@ export default function About() {
                           animate={descInView?"open":"closed"}
                           className={styles.spanner}
                         >
-                        {word}
+                        {word + " "}
                         </motion.span>
                       </span>
                     )

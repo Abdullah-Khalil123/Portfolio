@@ -3,7 +3,10 @@
     overflow: hidden;
     display: inline-flex;
     font-size: 64px;
-    color: #fff;
+    color: transparent;
+
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:  white;
 }
 @media (max-width:650px) {
     .masku{

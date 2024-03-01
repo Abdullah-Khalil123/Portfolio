@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Outfit } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Portfolio",
