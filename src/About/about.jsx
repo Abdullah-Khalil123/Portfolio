@@ -31,7 +31,7 @@ export default function About() {
     <div className={styles.aboutContainer} ref={aboutContainer}>
       <div className={styles.aboutDescriptions} ref={aboutDescription} data-scroll data-scroll-speed={isMobile?0.2:0.3}>
         <h2>
-        Hi I'm {aboutData.name}
+        Hi I&apos;m {aboutData.name}
         </h2>
         {
           aboutArray.map((para,index)=>{
