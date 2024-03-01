@@ -45,7 +45,7 @@ export default function Footer() {
                     onMouseEnter={()=>{document.body.style.backgroundColor="#01411c"}} 
                     onMouseLeave={()=>{document.body.style.backgroundColor="#121111"}}
                 >
-                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/phone.svg`} />
+                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/phone.svg`} alt='My Pic'/>
                 </motion.div>
                 <motion.a
                     href={`mailto:${socials.email}`}
@@ -56,7 +56,7 @@ export default function Footer() {
                     onMouseEnter={()=>{document.body.style.backgroundColor="#e83313"}} 
                     onMouseLeave={()=>{document.body.style.backgroundColor="#121111"}}
                 >
-                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/gmail.svg`} />
+                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/gmail.svg`}  alt='My Pic'/>
                 </motion.a>
                 <motion.a 
                     href={socials.linkedin}
@@ -68,7 +68,7 @@ export default function Footer() {
                     onMouseEnter={()=>{document.body.style.backgroundColor="#0a66c2"}} 
                     onMouseLeave={()=>{document.body.style.backgroundColor="#121111"}}
                 >
-                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/LinkedIn.svg`} />
+                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/LinkedIn.svg`}  alt='My Pic'/>
 
                 </motion.a>
                 <motion.a 
@@ -81,7 +81,7 @@ export default function Footer() {
                     onMouseEnter={()=>{document.body.style.backgroundColor="#0ac2ad"}} 
                     onMouseLeave={()=>{document.body.style.backgroundColor="#121111"}}
                 >
-                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/github.svg`} />
+                    <Image width={40} height={40} src={`${nextConfig.basePath}/svgs/github.svg`}  alt='My Pic'/>
                     
                 </motion.a>
             </div>
